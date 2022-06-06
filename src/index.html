@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Player Stats Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <section class="card">
+    <div class="custom-select">
+      <select id="playerSelect">
+        <option value="0">Select a player...</option>
+      </select>
+    </div>
+    <div class="player">
+        <div class="player__photo">
+          <img id="playerPhoto" src="assets/players/p4916.png" alt="">
+        </div>
+        <div class="player__top">
+            <div class="player__team player__team--21" id="playerTeam">Tottenham hotspur</div>
+            <div class="player__name" id="playerName">Toby Alderweireld</div>
+            <div class="player__position" id="playerPosition">Defender</div>
+        </div>
+        <div class="player__row">
+            <span class="player__text">Appearances</span>
+            <strong class="player__value" id="statAppearances">80</strong>
+        </div>
+        <div class="player__row">
+            <span class="player__text">Goals</span>
+            <strong class="player__value" id="statGoals">5</strong>
+        </div>
+        <div class="player__row">
+            <span class="player__text">Assists</span>
+            <strong class="player__value" id="statAssists">2</strong>
+        </div>
+        <div class="player__row">
+            <span class="player__text">Goals per match</span>
+            <strong class="player__value" id="statGoalsPerMatch">0.06</strong>
+        </div>
+        <div class="player__row">
+            <span class="player__text">Passes per minute</span>
+            <strong class="player__value" id="statPasses">0.26</strong>
+        </div>
+    </div>
+  </section>
+</body>
+<script src="scripts/main.js"></script>
+
+</html>

@@ -1,0 +1,92 @@
+@use 'styles/utils' as *;
+@use 'styles/components/select';
+
+.card {
+  background: #fff url('assets/bg.png') no-repeat;
+  background-position: 100% 75px;
+  box-shadow: 0 0 5px #000;
+  padding: 15px;
+  width: 300px;
+}
+
+.select {
+  margin-bottom: 20px;
+}
+
+.player {
+  background: $info-background;
+  color: $info-color;
+  margin: 240px -15px -15px;
+  padding: 15px;
+  position: relative;
+
+  &__photo {
+    bottom: 100%;
+    left: 15px;
+    position: absolute;
+
+    img {
+      display: block;
+      height: 210px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 15px;
+    padding-right: 100px;
+  }
+
+  &__team {
+    background: #fff url('assets/badges_sprite.png') no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #fff;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    right: 11px;
+    text-indent: -9999px;
+    top: -43px;
+    transform: scale(0.7);
+    width: 100px;
+
+    &--1 { //arsenal
+      background-position: -100px -100px;
+    }
+
+    &--11 { //manchester city
+      background-position: -800px -700px;
+    }
+
+    &--12 { //manchester united
+      background-position: -600px -800px;
+    }
+
+    &--21 { //tottenham
+      background-position: -500px -1000px;
+    }
+  }
+
+  &__name {
+    font-size: 22px;
+    line-height: 1.27;
+  }
+
+  &__row {
+    align-items: center;
+    background: #eaeaea;
+    box-shadow: 0 0 5px rgba(0 0 0 / 20%);
+    color: #38003c;
+    display: flex;
+    margin-bottom: 3px;
+    padding: 5px 10px;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__value {
+    font-size: 19px;
+    margin-left: 10px;
+  }
+}

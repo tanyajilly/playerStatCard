@@ -1,0 +1,56 @@
+@use 'styles/utils' as *;
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  background-color: transparent;
+  border: unset;
+  cursor: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0 1em 0 0;
+  width: 100%;
+
+  // Stack above custom arrow
+  z-index: 1;
+
+  // Remove dropdown arrow in IE10 & IE11
+  // @link https://www.filamentgroup.com/lab/select-css.html
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.custom-select {
+  align-items: center;
+  background-color: $select-bg;
+  cursor: pointer;
+  display: grid;
+  grid-template-areas: 'select';
+  position: relative;
+  width: 100%;
+
+  select {
+    padding: 8px 15px;
+  }
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  // Custom arrow
+  &:not(.select--multiple)::after {
+    border: solid $select-color;
+    border-width: 0 0 1px 1px;
+    content: '';
+    height: 0.5em;
+    justify-self: end;
+    margin-right: 10px;
+    transform: rotate(-45deg);
+    width: 0.5em;
+  }
+}
