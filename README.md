@@ -12,16 +12,9 @@ starbase uses [webpack-dev-server](https://github.com/webpack/webpack-dev-server
 
 After running `npm run start` in the project root, your `/src` code will be served at the url above and watched for changes. As you modify code in `/src`, the project will be recompiled and your browser will refresh to show the latest changes.
 
-```
-npm run start
-```
 
 ### Building for Production
 
 Use `npm run build` in your project root to run a production build.
 
 Production builds compile & minify your assets into `/dist` for distribution and/or integration into whatever codebase you'll be using these assets in.
-
-```
-npm run build
-```
